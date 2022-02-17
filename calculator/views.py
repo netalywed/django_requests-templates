@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def recipes(request, dish):
-    people = request.GET.get("servings")
+    people = request.GET.get("servings", 1)
     DATA = {
         'omlet': {
             'яйца, шт': 2,
